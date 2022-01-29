@@ -1,16 +1,18 @@
 function compute()
 {
-    p = document.getElementById("principal").value;
-    rate = document.getElementById("rate").value;
-    years = document.getElementById("years").value;
+    var principal = document.getElementById("principal").value;
+    var rate = document.getElementById("rate").value;
+    var years = document.getElementById("years").value;
 
-    final_value = p * (1 + rate) ** years
+    var interest = principal * years * rate/100
 
-    cur_year = new Date().getFullYear()
-    final_year = cur_year + years 
+    var year = new Date().getFullYear() + parseInt(years)
 
-    document.getElementById("text").innerHTML = 
-    "If you deposit" + p + "at an interest of " + rate + "%. You will receive an amount of " + final_value + ","+"in the year" + final_year + "."
-    
+    document.getElementById("result").innerText = 
+    "If you deposit" + principal + ",\nat an interest rate of " + rate + "%.\nYou will receive an amount of " + interest + ",\n in the year 2025"
 }
         
+function updateRate(){
+    var rateval = document.getElementById("rate").value;
+    document.getElementById("rate_val").innerText=rateval+"%"
+}
