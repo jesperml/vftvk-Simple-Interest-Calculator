@@ -9,7 +9,7 @@ function compute()
     var year = new Date().getFullYear() + parseInt(years)
 
     document.getElementById("result").innerText = 
-    "If you deposit" + principal + ",\nat an interest rate of " + rate + "%.\nYou will receive an amount of " + interest + ",\n in the year 2025"
+    "If you deposit " + principal + ",\nat an interest rate of " + rate + "%.\nYou will receive an amount of " + interest + ",\n in the year 2025."
 }
         
 function updateRate(){
