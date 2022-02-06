@@ -5,13 +5,13 @@
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="maindiv">
-            <h1>Simple Interest Calculator</h1>
-            <div class="innerdiv">
-            <div class="container">
+        <div class="maindiv"> 
+            <h1>Simple Interest Calculator</h1> <!-- header -->
+            <div class="innerdiv"> <!-- inner (indented) div to hold elemnts except from footer-->
+            <div class="container"><!-- div to set up grid format for input labels and fields-->
                 <label> Amount </label> <input type="number"  id="principal" onfocusout="return checkPrincipal()">  
                 
-                <label> Rate </label> <div class="rangediv"> <input type="range" value="0" min="0" max="10" step = "0.25" id="rate" onload="updateRate()" onchange="updateRate()"> <span id="rate_val"></span> </div>
+                <label> Rate </label> <div class="rangediv"> <input type="range" value="0" min="0" max="10" step = "0.25" id="rate" onchange="updateRate()"> <span id="rate_val"></span> </div>
                 <label> No. of Years </label> <select id="years">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -26,7 +26,7 @@
                     </select>
             <button onclick="compute()">Compute interest</button>
             </div>
-            <span id="result">
+            <span id="result"> <!-- span to show result-->
 
             </span>
             <br>

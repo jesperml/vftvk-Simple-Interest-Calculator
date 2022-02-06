@@ -1,4 +1,4 @@
-function compute()
+function compute() /* function to compute and write the accrued interest */
 {
     var principal = document.getElementById("principal").value;
     var rate = document.getElementById("rate").value;
@@ -15,12 +15,12 @@ function compute()
            "in the year <mark>" + year +"</mark>. <br>")
 }
         
-function updateRate(){
+function updateRate(){ /* function to update rate */
     var rateval = document.getElementById("rate").value;
     document.getElementById("rate_val").innerText=rateval+"%"
 }
 
-function checkPrincipal(){
+function checkPrincipal(){ /* function to check if value entered at principal is posive. Raises alert if not. */
     var principal = document.getElementById("principal")
     var principal_value = parseInt(principal.value)
     if (principal_value <= 0) {
