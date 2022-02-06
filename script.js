@@ -12,7 +12,7 @@ function compute()
     "If you deposit <mark>"+principal+"</mark> <br>".concat(
            "at an interest rate of <mark>" + rate + "%</mark>.<br>",
            "You will receive an amount of <mark>" + interest + "</mark>,<br>",
-           "in the year <mark>" + year +"</mark>.")
+           "in the year <mark>" + year +"</mark>. <br>")
 }
         
 function updateRate(){
