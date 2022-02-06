@@ -8,11 +8,11 @@ function compute()
 
     var year = new Date().getFullYear() + parseInt(years)
 
-    document.getElementById("result").innerText = 
-    "If you deposit " + principal + ",\n".concat(
-           "at an interest rate of " + rate + "%.\n",
-           "You will receive an amount of " + interest + ",\n",
-           "in the year " + year +".")
+    document.getElementById("result").innerHTML = 
+    "If you deposit <mark>"+principal+"</mark> <br>".concat(
+           "at an interest rate of <mark>" + rate + "%</mark>.<br>",
+           "You will receive an amount of <mark>" + interest + "</mark>,<br>",
+           "in the year <mark>" + year +"</mark>.")
 }
         
 function updateRate(){
@@ -23,7 +23,7 @@ function updateRate(){
 function checkPrincipal(){
     var principal = document.getElementById("principal")
     var principal_value = parseInt(principal.value)
-    if (principal_value < 0) {
+    if (principal_value <= 0) {
         alert("Enter a positive number")
         principal.value = ""
         principal.focus()
