@@ -9,10 +9,25 @@ function compute()
     var year = new Date().getFullYear() + parseInt(years)
 
     document.getElementById("result").innerText = 
-    "If you deposit " + principal + ",\nat an interest rate of " + rate + "%.\nYou will receive an amount of " + interest + ",\n in the year 2025."
+    "If you deposit " + principal + ",\n".concat(
+           "at an interest rate of " + rate + "%.\n",
+           "You will receive an amount of " + interest + ",\n",
+           "in the year " + year +".")
 }
         
 function updateRate(){
     var rateval = document.getElementById("rate").value;
     document.getElementById("rate_val").innerText=rateval+"%"
+}
+
+function checkPrincipal(){
+    var principal = document.getElementById("principal")
+    var principal_value = parseInt(principal.value)
+    if (principal_value < 0) {
+        alert("Enter a positive number")
+        principal.value = ""
+        principal.focus()
+        return false
+    }
+    return true
 }
