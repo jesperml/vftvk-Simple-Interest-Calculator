@@ -26,7 +26,12 @@ select { /* setting width of the select tag (No. of years)*/
 .container{ /* container style for the grid containing labels and input fields */
     display:grid;
     grid-gap:10px;
-    grid-template-columns: 120px 190px;
+    grid-template-columns: 110px 220px;
     width:300px;
     margin-bottom:10px;
+}
+
+input[type="number"]{
+    -moz-appearance: textfield;
+    width:150px
 }
