@@ -26,7 +26,7 @@ function checkPrincipal(){ /* function to check if value entered at principal is
     if (principal_value <= 0) {
         alert("Enter a positive number")
         principal.value = ""
-        principal.focus()
+        setTimeout(function(){principal.focus();},1); /* setting small timeout to make sure focus to works */
         return false
     }
     return true
