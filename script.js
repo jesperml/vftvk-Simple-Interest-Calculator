@@ -1,5 +1,9 @@
 function compute() /* function to compute and write the accrued interest text */
-{
+{   
+    if(!checkPrincipal()){ /* checking if principle value is positive before calculations */
+        return false
+    }
+
     var principal = document.getElementById("principal").value;
     var rate = document.getElementById("rate").value;
     var years = document.getElementById("years").value;
@@ -13,6 +17,7 @@ function compute() /* function to compute and write the accrued interest text */
            "at an interest rate of <mark>" + rate + "%</mark>.<br>",
            "You will receive an amount of <mark>" + interest + "</mark>,<br>",
            "in the year <mark>" + year +"</mark>. <br>")
+    return true
 }
         
 function updateRate(){ /* function to update rate */
