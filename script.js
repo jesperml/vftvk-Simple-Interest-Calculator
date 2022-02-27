@@ -1,4 +1,4 @@
-function compute() /* function to compute and write the accrued interest */
+function compute() /* function to compute and write the accrued interest text */
 {
     var principal = document.getElementById("principal").value;
     var rate = document.getElementById("rate").value;
